@@ -1,0 +1,5 @@
+conditionalEvents:
+- condition: user.accountLinkingStatus == "LINKED"
+  transitionToScene: initial_scene
+- condition: user.accountLinkingStatus == "NOT_LINKED"
+  transitionToScene: check_verified_AccountLinking

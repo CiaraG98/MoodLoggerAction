@@ -1,0 +1,9 @@
+accountLinking:
+  enableAccountCreation: true
+  linkingType: GOOGLE_SIGN_IN
+defaultLocale: en
+localizedSettings:
+  displayName: My Mood Logger
+  pronunciation: My Mood Logger
+  voice: female_1
+projectId: moodlogger-e7848

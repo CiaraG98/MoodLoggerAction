@@ -1,0 +1,20 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  handler:
+    webhookHandler: reactToActivity
+  transitionToScene: finish_log
+slots:
+- commitBehavior:
+    writeSessionParam: exercise
+  name: exercise
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: What was your activity today?
+  required: true
+  type:
+    name: exercise_type

@@ -1,0 +1,5 @@
+conditionalEvents:
+- condition: user.verificationStatus == 'VERIFIED'
+  handler:
+    webhookHandler: showData
+  transitionToScene: actions.scene.END_CONVERSATION

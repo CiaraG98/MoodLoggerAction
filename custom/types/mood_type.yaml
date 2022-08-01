@@ -1,0 +1,23 @@
+synonym:
+  entities:
+    bad:
+      synonyms:
+      - bad
+      - crappy
+      - sad
+      - anxious
+      - stressed
+    good:
+      synonyms:
+      - good
+      - great
+      - fantastic
+      - amazing
+      - grand
+    okay:
+      synonyms:
+      - meh
+      - okay
+      - alright
+      - fine
+  matchType: EXACT_MATCH

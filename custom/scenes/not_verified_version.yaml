@@ -1,0 +1,7 @@
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: 'You are not verified, a guest version of this application will run shortly. '

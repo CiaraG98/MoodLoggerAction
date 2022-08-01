@@ -1,0 +1,8 @@
+handler:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: Welcome to Mood Logger!
+transitionToScene: check_verified

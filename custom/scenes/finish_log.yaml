@@ -1,0 +1,13 @@
+intentEvents:
+- intent: actions.intent.YES
+  transitionToScene: initial_scene
+- intent: actions.intent.NO
+  transitionToScene: actions.scene.END_CONVERSATION
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: Finished Mood Logging. Would you like to use any other Mood Logger services?
+  webhookHandler: sendDataToDB

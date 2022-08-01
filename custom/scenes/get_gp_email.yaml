@@ -1,0 +1,12 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  handler:
+    webhookHandler: setGPEmail
+  transitionToScene: send_to_gp
+slots:
+- commitBehavior:
+    writeSessionParam: gp_email
+  name: gp_email
+  required: true
+  type:
+    name: email

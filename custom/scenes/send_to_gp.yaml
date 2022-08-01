@@ -1,0 +1,25 @@
+conditionalEvents:
+- condition: session.params.gp == true
+  handler:
+    webhookHandler: sendToGP
+- condition: session.params.gp == false
+  handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: 'First, please enter your GP''s email address. '
+  transitionToScene: get_gp_email
+intentEvents:
+- intent: actions.intent.YES
+  transitionToScene: initial_scene
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: No Problem. Thank You.
+  intent: actions.intent.NO
+  transitionToScene: actions.scene.END_CONVERSATION

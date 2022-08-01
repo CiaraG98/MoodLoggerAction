@@ -1,0 +1,26 @@
+intentEvents:
+- handler:
+    webhookHandler: checkLog
+  intent: log
+  transitionToScene: mood
+- intent: analysis
+  transitionToScene: analysis
+- handler:
+    webhookHandler: checkGPEmail
+  intent: send_to
+  transitionToScene: send_to_gp
+- intent: view_data
+  transitionToScene: view_log
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        firstSimple:
+          variants:
+          - speech: What can I do for you?
+        suggestions:
+        - title: Log Mood
+        - title: View Analysis
+        - title: Send to GP
+        - title: View Log
+  webhookHandler: init

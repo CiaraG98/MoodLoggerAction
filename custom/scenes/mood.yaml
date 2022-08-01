@@ -1,0 +1,17 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  handler:
+    webhookHandler: reactToMood
+  transitionToScene: hours_of_sleep
+intentEvents:
+- intent: exit
+  transitionToScene: actions.scene.END_CONVERSATION
+onEnter:
+  webhookHandler: initLog
+slots:
+- commitBehavior:
+    writeSessionParam: mood_today
+  name: mood_today
+  required: true
+  type:
+    name: mood_type

@@ -1,0 +1,40 @@
+synonym:
+  entities:
+    mild:
+      synonyms:
+      - mild
+      - walking
+      - walk
+      - stroll
+      - cleaned
+      - shopping
+      - shops
+      - cleaning
+      - walked
+      - cutting the grass
+    moderate:
+      synonyms:
+      - jogging
+      - cycling
+      - dancing
+      - moderate
+      - hiking
+      - running
+      - football
+      - tennis
+      - basketball
+      - swimming
+      - rugby
+      - run
+      - swim
+      - hike
+      - cycle
+      - strength training
+      - weights
+      - gym
+    not active:
+      synonyms:
+      - not active
+      - work from home
+      - working from home
+  matchType: EXACT_MATCH

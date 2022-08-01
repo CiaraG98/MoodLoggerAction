@@ -1,0 +1,10 @@
+parameters:
+- name: chosenMood
+  type:
+    name: mood_type
+trainingPhrases:
+- ($chosenMood 'good' auto=true)
+- i feel ($chosenMood 'alright' auto=true)
+- i feel ($chosenMood 'good' auto=true)
+- i was in a ($chosenMood 'great' auto=true) mood
+- i was in a ($chosenMood 'good' auto=true) mood

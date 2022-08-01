@@ -1,0 +1,31 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  handler:
+    webhookHandler: viewLog
+intentEvents:
+- intent: actions.intent.YES
+  transitionToScene: initial_scene
+- handler:
+    staticPrompt:
+      candidates:
+      - promptResponse:
+          firstSimple:
+            variants:
+            - speech: No problem. Thank you.
+  intent: actions.intent.NO
+  transitionToScene: actions.scene.END_CONVERSATION
+slots:
+- commitBehavior:
+    writeSessionParam: dateToView
+  name: dateToView
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: What date would you like to view?
+  required: true
+  type:
+    name: actions.type.Date

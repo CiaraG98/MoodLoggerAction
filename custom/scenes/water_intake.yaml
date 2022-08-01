@@ -1,0 +1,20 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  handler:
+    webhookHandler: reactToWater
+  transitionToScene: activity_level
+slots:
+- commitBehavior:
+    writeSessionParam: water_intake
+  name: water_intake
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: How many glasses of water have you had today?
+  required: true
+  type:
+    name: actions.type.Number

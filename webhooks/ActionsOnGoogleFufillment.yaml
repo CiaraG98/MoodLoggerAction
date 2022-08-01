@@ -1,0 +1,17 @@
+handlers:
+- name: viewLog
+- name: sendToGP
+- name: sendDataToDB
+- name: init
+- name: checkLog
+- name: initLog
+- name: checkGPEmail
+- name: setGPEmail
+- name: reactToMood
+- name: reactToSleep
+- name: reactToWater
+- name: reactToActivity
+- name: deliverAnalysis
+httpsEndpoint:
+  baseUrl: https://us-central1-moodloggerbackend-38bac.cloudfunctions.net/ActionsOnGoogleFulfillment
+  endpointApiVersion: 2

@@ -1,0 +1,20 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  handler:
+    webhookHandler: reactToSleep
+  transitionToScene: water_intake
+slots:
+- commitBehavior:
+    writeSessionParam: hours_of_sleep
+  name: hours_of_sleep
+  promptSettings:
+    initialPrompt:
+      staticPrompt:
+        candidates:
+        - promptResponse:
+            firstSimple:
+              variants:
+              - speech: Roughly how many hours of sleep did you get last night?
+  required: true
+  type:
+    name: actions.type.Number
