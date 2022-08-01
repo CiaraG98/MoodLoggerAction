@@ -17,4 +17,4 @@ slots:
               - speech: What was your activity today?
   required: true
   type:
-    name: exercise_type
+    name: activity_type
